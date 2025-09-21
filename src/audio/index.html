@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowd reaction | Next.js Guide</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container card">
+        <a href=".." class="back-button">
+            <img src="../assets/arrow-left.svg" alt="arrow-left icon">
+            Back
+        </a>
+        <h1>Crowd reaction</h1>
+        <button id="play">Play</button>
+        <button id="pause">Stop</button>
+        <div class="gallery">
+            <audio src="../assets/audio1.mp3" controls loop></audio>
+            <audio src="../assets/audio2.mp3" controls loop></audio>
+            <audio src="../assets/audio3.mp3" controls loop></audio>
+            <audio src="../assets/audio4.mp3" controls loop></audio>
+            <audio src="../assets/audio1.mp3" controls loop></audio>
+            <audio src="../assets/audio2.mp3" controls loop></audio>
+            <audio src="../assets/audio3.mp3" controls loop></audio>
+            <audio src="../assets/audio4.mp3" controls loop></audio>
+            <audio src="../assets/audio1.mp3" controls loop></audio>
+            <audio src="../assets/audio2.mp3" controls loop></audio>
+            <audio src="../assets/audio3.mp3" controls loop></audio>
+            <audio src="../assets/audio4.mp3" controls loop></audio>
+            <audio src="../assets/audio1.mp3" controls loop></audio>
+            <audio src="../assets/audio2.mp3" controls loop></audio>
+            <audio src="../assets/audio3.mp3" controls loop></audio>
+            <audio src="../assets/audio4.mp3" controls loop></audio>
+            <audio src="../assets/audio1.mp3" controls loop></audio>
+            <audio src="../assets/audio2.mp3" controls loop></audio>
+            <audio src="../assets/audio3.mp3" controls loop></audio>
+            <audio src="../assets/audio4.mp3" controls loop></audio>
+        </div>
+    </div>
+
+    <script>
+        const playButton = document.getElementById('play');
+        const audios = document.querySelectorAll('audio');
+
+        // Set initial volume for all audio elements
+        audios.forEach(audio => {
+            audio.volume = 0.01;
+        });
+
+        playButton.addEventListener('click', () => {
+            audios.forEach(audio => {
+                audio.play();
+            });
+        });
+
+        const pauseButton = document.getElementById('pause');
+        pauseButton.addEventListener('click', () => {
+            audios.forEach(audio => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+        });
+    </script>
+</body>
+
+</html>

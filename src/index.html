@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Next.js Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="item">
+            <h1>Next.js Guide</h1>
+        </div>
+        <ul class="item">
+            <li>
+                <a href="text">Overview</a>
+            </li>
+            <li>
+                <a href="image">Gallery</a>
+            </li>
+            <li>
+                <a href="audio">Crowd Reaction</a>
+            </li>
+            <li>
+                <a href="video">Tutorial</a>
+            </li>
+        </ul>
+        <ul class="item">
+            <li>
+                <a href="text">Overview</a>
+            </li>
+            <li>
+                <a href="image">Gallery</a>
+            </li>
+            <li>
+                <a href="audio">Crowd Reaction</a>
+            </li>
+            <li>
+                <a href="video">Tutorial</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const hoverTarget = document.getElementById('container');
+        hoverTarget.addEventListener('mouseenter', () => {
+            hoverTarget.childNodes.forEach(e => {
+                if (e.nodeType === Node.ELEMENT_NODE) {
+                    e.classList.add('hovered');
+                }
+            });
+        });
+        hoverTarget.addEventListener('mouseleave', () => {
+            hoverTarget.childNodes.forEach(e => {
+                if (e.nodeType === Node.ELEMENT_NODE) {
+                    e.classList.remove('hovered');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

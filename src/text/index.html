@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview | Next.js Guide</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container card">
+        <a href=".." class="back-button">
+            <img src="../assets/arrow-left.svg" alt="arrow-left icon">
+            Back
+        </a>
+        <h1>Overview</h1>
+        <div class="contents">
+            <p>
+                Next.js is a powerful React framework that enables developers to build full-stack web applications with
+                ease. It provides server-side rendering, static site generation, and automatic code splitting out of the
+                box. Key features include file-based routing, API routes for backend functionality, built-in CSS and
+                Sass
+                support, and excellent performance optimizations. Next.js is ideal for building everything from static
+                websites to complex web applications, offering both developer experience improvements and superior user
+                performance through features like image optimization and automatic bundling.
+            </p>
+            <p>
+                A core strength of Next.js lies in its flexible rendering strategies. You can choose between Server-
+                Side Rendering (SSR) for always-fresh data, Static Site Generation (SSG) for high-performance cached
+                pages, and Incremental Static Regeneration (ISR) to revalidate static content on a schedule without a
+                full rebuild. On top of that, Client-Side Rendering (CSR) techniques remain available for interactive
+                islands or user-specific states. This mix-and-match model lets teams optimize for both speed and
+                personalization, applying the right approach per route rather than committing to a single global mode.
+            </p>
+            <p>
+                Routing in Next.js is powered by the file system: every file placed in the <code>pages/</code> (or in
+                newer versions, organized through the <code>app/</code> directory with the App Router) becomes a route.
+                Dynamic segments (e.g. <code>[id].tsx</code>) and catch-all routes reduce boilerplate while nested
+                layouts and shared loading states (in the App Router) improve both developer ergonomics and perceived
+                performance. API Routes allow colocating backend logic beside UI code, enabling lightweight full-stack
+                implementations without spinning up a separate server—great for prototypes, internal tools, or modest
+                application backends.
+            </p>
+            <p>
+                Performance features are largely automatic: code splitting ensures users download only what they need;
+                the Image Optimization pipeline delivers responsive, properly compressed images; and built-in support
+                for edge deployment targets and React Server Components (in modern Next.js) enables sending less
+                JavaScript to the client. Middleware and Edge Functions let you implement authentication, A/B testing,
+                personalization, and rewrites at the network edge with minimal latency. Combined, these capabilities
+                reduce Time to First Byte (TTFB) and improve Core Web Vitals out of the box.
+            </p>
+            <p>
+                Choosing Next.js makes sense when you need SEO-friendly pages, rapid iteration, and a blend of static
+                and dynamic content. Blog platforms, marketing sites with periodically updated product data, SaaS
+                dashboards, e-commerce catalogs with frequently changing inventory, and internationalized sites all
+                benefit from its hybrid model. While other meta-frameworks exist, Next.js differentiates itself through
+                its mature ecosystem, Vercel-native optimizations, and a relentless focus on developer experience.
+            </p>
+            <p>
+                To get started effectively, focus first on understanding route organization, data fetching primitives
+                (like <code>getStaticProps</code>, <code>getServerSideProps</code>, and the newer async component /
+                <code>fetch</code> patterns in the App Router), and performance tooling (such as the built-in analyzer
+                or Lighthouse). From there, layer in authentication, caching strategies, and edge deployments. Mastery
+                involves not just using features, but intentionally selecting the right rendering mode for each page
+                based on freshness, personalization, and cacheability requirements.
+            </p>
+            <p>
+                In short, Next.js streamlines full-stack React development by unifying routing, rendering, data access,
+                and performance optimizations. Its opinionated conventions reduce friction while preserving flexibility
+                for complex architectures—making it a pragmatic choice for modern, user-centric web applications.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
